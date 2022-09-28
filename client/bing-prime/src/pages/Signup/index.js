@@ -11,7 +11,7 @@ export default function Signup() {
         <img  src={logo}  alt="logo" />
       </a>
 
-      <a class="sign__in__btn primary--btn" href="#"> Sign in </a>
+      <a class="sign__in__btn primary--btn" href="http://localhost:3000/login"> Sign in </a>
     </header>
     <section class="banner__section">
         <img class="banner" src="https://i.postimg.cc/T17HbGfh/banner-image.jpg" alt="" />
