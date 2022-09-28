@@ -35,7 +35,7 @@ button {
 }
 
 :root {
-	--primary-color: #e50914;
+	--primary-color: #2c9cff;
 }
 
 .primary--btn {
@@ -68,12 +68,12 @@ button {
 .header__logo {
 	display: block;
 	width: 15rem;
-	padding: 0 1rem;
+	padding: 2rem;
+	margin-left: -70px;
 }
 
 .header__logo img {
-	height: 100%;
-	width: 100%;
+	width: 300%;
 }
 
 .banner__section {
@@ -111,10 +111,10 @@ button {
 .banner__content {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 23%;
 	z-index: 15;
 	transform: translate(-50%, -50%);
-	width: 100%;
+	width: 45%;
 	max-width: 900px;
 	text-align: center;
 	padding: 0rem 5rem;
@@ -132,8 +132,9 @@ button {
 }
 
 .membership__form {
-	display: grid;
+	display: block;
 	position: relative;
+	
 }
 
 .membership__input__container {
@@ -145,21 +146,22 @@ button {
 .membership__input {
 	flex-basis: 100%;
 	padding: 1rem;
-	padding-top: 2rem;
+	padding-top: 2.1rem;
 	padding-bottom: 1.5rem;
 	border: none;
+	
 	font-size: 1.6rem;
 }
 
-.membership__input:focus {
-	outline: none;
-}
+
 
 .membership__btn {
+	background-color: #2c9cff;
+	color: rgb(255, 255, 255);
 	justify-self: center;
 	width: 100%;
-	max-width: 20rem;
-	padding: 1.5rem 3rem;
+	max-width: 100%;
+	padding: 0.9rem 3rem;
 }
 
 .membership__input__message {
@@ -195,7 +197,7 @@ button {
 
 .story__card {
 	padding: 5rem 5%;
-	display: grid;
+	display: block;
 	grid-row-gap: 1rem;
 	max-width: 1400px;
 	margin: 0 auto;
@@ -220,26 +222,24 @@ button {
 }
 
 .tv__anime__container {
-	width: 30rem;
-	height: 23.4rem;
+	/* width: 30rem; */
+	/* height: 23.4rem; */
 	position: relative;
 }
 
 .tv__img {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+	/* top: 0; */
+	/* left: 0; */
+	/* width: 100%; */
 	height: 100%;
-	z-index: 10;
+	/* z-index: 10; */
 }
 
 .tv__anime {
 	position: absolute;
 	top: 0.8rem;
 	left: 4rem;
-	width: 22.1rem;
-	height: 21rem;
 }
 
 .download__container {

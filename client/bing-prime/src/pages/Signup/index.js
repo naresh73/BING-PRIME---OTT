@@ -1,6 +1,7 @@
 import React from 'react';
 import './Signup.css';
 import logo from '../../Assests/Logo/bing.png';
+import got from '../../Assests/GOT/got.jpg';
 
 export default function Signup() {
   return (
@@ -13,7 +14,7 @@ export default function Signup() {
       <a class="sign__in__btn primary--btn" href="#"> Sign in </a>
     </header>
     <section class="banner__section">
-        <img class="banner" src="https://i.redd.it/128uj78z58m01.jpg" alt="" />
+        <img class="banner" src="https://i.postimg.cc/T17HbGfh/banner-image.jpg" alt="" />
         <div class="banner__overlay"></div>
 
         <div class="banner__content">
@@ -26,17 +27,19 @@ export default function Signup() {
 
           <form class="membership__form">
             <div class="membership__input__container">
-              <input class="membership__input" type="email" />
-              <label class="membership__placeholder" for="email">Email</label>
+              <input class="membership__input" placeholder='Enter your email address' type="email" />
+              
             </div>
             <label class="membership__input__message"> </label>
 
             <button class="membership__btn primary--btn" type="submit">
               Get started
-            </button>
+            </button>  
           </form>
+          
         </div>
-      </section><hr class="section__divider" /><div class="story__card__container">
+    </section>
+      <hr class="section__divider" /><div class="story__card__container">
         <section class="story__card">
           <div class="story__card__left">
             <h1>Enjoy on your TV.</h1>
@@ -49,9 +52,9 @@ export default function Signup() {
 
           <div class="story__card__right">
             <div class="tv__anime__container">
-              <img class="tv__img" src="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media/tv.png" alt="" />
+              <img class="tv__img" src="https://i.postimg.cc/nz1WHBW4/banner-image-left.jpg" width="900px" height="590px" alt="" />
 
-              <video autoplay muted loop class="tv__anime" src="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media/tv_animation.m4v"></video>
+              {/* <img class="tv_f_anime" src="https://i.postimg.cc/nz1WHBW4/banner-image-left.jpg"  alt="" /> */}
             </div>
           </div>
         </section>
@@ -67,13 +70,13 @@ export default function Signup() {
 
           <div class="story__card__right">
             <div class="download__container">
-              <img src="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media/mobile.jpg" alt="" />
+              <img src={got} width="20px" alt="" />
 
               <div class="download__animation__container">
-                <img class="poster" src="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media/boxshot.png" alt="" />
+                <img class="poster" src="https://c4.wallpaperflare.com/wallpaper/709/173/262/game-of-thrones-battle-of-the-bastards-jon-snow-kit-harington-wallpaper-preview.jpg" alt="" />
 
                 <div class="text__container">
-                  <p class="title">Stranger Things</p>
+                  <p class="title">Game of Thrones</p>
                   <p class="downloading">Downloading...</p>
                 </div>
 
@@ -112,33 +115,9 @@ export default function Signup() {
         </section>
 
         <hr class="section__divider" />
-      </div><section class="faq">
-        <h2 class="faq__title">Frequently Asked Questions</h2>
-
-        <ul class="accordion__list">
-          <li class="accordion">
-            <button class="accordion__question">
-              Consectetur ipsum error eaque ipsa?
-            </button>
-
-            <p class="accordion__answer">
-              Elit possimus error sunt aperiam quibusdam? Numquam similique quia eum.
-            </p>
-          </li>
-
-          <li class="accordion">
-            <button class="accordion__question">
-              Consectetur ipsum error eaque ipsa?
-            </button>
-
-            <p class="accordion__answer">
-              Elit possimus error sunt aperiam quibusdam? Numquam similique quia eum.
-            </p>
-          </li>
-        </ul>
-      </section><hr class="section__divider" /><footer class="footer">
+      </div>
+      <footer class="footer">
         <a class="footer__link contact--link" href="#"> Questions?Contact Us.</a>
-
         <div class="footer__link__container">
           <a class="footer__link" href="#">FAQ</a>
           <a class="footer__link" href="#">Help Center</a>
@@ -153,7 +132,7 @@ export default function Signup() {
           <a class="footer__link" href="#">jobs</a>
           <a class="footer__link" href="#">privacy</a>
           <a class="footer__link" href="#">contact us</a>
-          <a class="footer__link" href="#">only on netflix</a>
+          <a class="footer__link" href="#">only on BING cinema</a>
           <a class="footer__link" href="#">Cookie Preferences</a>
         </div>
       </footer></>
