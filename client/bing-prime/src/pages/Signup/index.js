@@ -2,6 +2,7 @@ import React from 'react';
 import './Signup.css';
 import logo from '../../Assests/Logo/bing.png';
 import got from '../../Assests/GOT/got.jpg';
+import Footer from '../../components/Footer';
 
 export default function Signup() {
   return (
@@ -53,8 +54,6 @@ export default function Signup() {
           <div class="story__card__right">
             <div class="tv__anime__container">
               <img class="tv__img" src="https://i.postimg.cc/nz1WHBW4/banner-image-left.jpg" width="900px" height="590px" alt="" />
-
-              {/* <img class="tv_f_anime" src="https://i.postimg.cc/nz1WHBW4/banner-image-left.jpg"  alt="" /> */}
             </div>
           </div>
         </section>
@@ -116,25 +115,7 @@ export default function Signup() {
 
         <hr class="section__divider" />
       </div>
-      <footer class="footer">
-        <a class="footer__link contact--link" href="#"> Questions?Contact Us.</a>
-        <div class="footer__link__container">
-          <a class="footer__link" href="#">FAQ</a>
-          <a class="footer__link" href="#">Help Center</a>
-          <a class="footer__link" href="#">Media Center</a>
-          <a class="footer__link" href="#">Ways to Watch</a>
-          <a class="footer__link" href="#">Speed Test</a>
-          <a class="footer__link" href="#">Investor Relations</a>
-          <a class="footer__link" href="#">Terms of Use</a>
-          <a class="footer__link" href="#">Corporate Information</a>
-          <a class="footer__link" href="#">Legal Notices</a>
-          <a class="footer__link" href="#">Account</a>
-          <a class="footer__link" href="#">jobs</a>
-          <a class="footer__link" href="#">privacy</a>
-          <a class="footer__link" href="#">contact us</a>
-          <a class="footer__link" href="#">only on BING cinema</a>
-          <a class="footer__link" href="#">Cookie Preferences</a>
-        </div>
-      </footer></>
+      <Footer />
+      </>
   )
 }
