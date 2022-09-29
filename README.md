@@ -1,2 +1,2 @@
-# BING-PRIME---OTT
-OTT platform - BING PRIME
+# BING cinema
+OTT platform - BING cinema
