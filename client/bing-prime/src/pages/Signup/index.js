@@ -1,45 +1,117 @@
-import React from 'react';
+import { useState } from 'react';
 import './Signup.css';
 import logo from '../../Assests/Logo/bing.png';
+import bannerImg from "../../Assests/banner.jpg";
 import got from '../../Assests/GOT/got.jpg';
 import Footer from '../../components/Footer';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 export default function Signup() {
-  return (
-    <>
-    <header class="header">
-      <a class="header__logo" href="#">
-        <img  src={logo}  alt="logo" />
-      </a>
+  const navigate = useNavigate();
 
-      <a class="sign__in__btn primary--btn" href="http://localhost:3000/login"> Sign in </a>
-    </header>
-    <section class="banner__section">
-        <img class="banner" src="https://i.postimg.cc/T17HbGfh/banner-image.jpg" alt="" />
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  })
+
+  
+  function handleChange(e) {
+    const { name, value } = e.target
+    setUser({
+      ...user,
+      [name]: value
+    })
+  }
+
+  function register() {
+    const {
+      name, email, password, confirmPassword
+    } = user;
+
+    if( name && email && password ) {
+      if(password === confirmPassword) {
+        axios.post("http://localhost:3001/register", user)
+        .then(res => alert(res.data.message))
+      }
+      else {
+        alert("password didn't match")
+      }
+    }
+    
+    else {
+      alert("invelid input")
+    }
+  }
+  return (
+    <div>
+      <header class="header">
+        <a class="header__logo" href="/">
+          <img src={logo} alt="logo" />
+        </a>
+
+        <Link to="/login" className="sign__in__btn primary--btn" >Login</Link>
+      </header>
+      <section class="banner__section">
+        <img class="banner" src={bannerImg} alt="" />
         <div class="banner__overlay"></div>
 
         <div class="banner__content">
-          <h1 class="banner__title">Unlimited movies, TV shows, and more.</h1>
-          <h2 class="banner__subtitle">Watch anywhere. Cancel anytime.</h2>
+          <h3 class="banner__title">Unlimited movies, TV shows, and more.</h3>
+          <h5 class="banner__subtitle">Watch anywhere. Cancel anytime.</h5>
 
           <h4 class="form__cta">
-            Ready to watch? Enter your email to create or restart your membership.
+            Ready to watch? Enter your email to create your account.
           </h4>
 
           <form class="membership__form">
             <div class="membership__input__container">
-              <input class="membership__input" placeholder='Enter your email address' type="email" />
-              
+              <input 
+              class="membership__input-name"
+              placeholder='name'
+              type="text" 
+              name="name"
+              value={user.name}
+              onChange={handleChange}
+              />
+              <input 
+              class="membership__input" 
+              placeholder='email' 
+              type="email" 
+              name="email"
+              value={user.email}
+              onChange={handleChange}
+              />
+              <input 
+              class="membership__input" 
+              placeholder='password' 
+              type="password"
+              name="password"
+              value={user.password}
+              onChange={handleChange} 
+              />
+              <input 
+              class="membership__input" 
+              placeholder='confirm password' 
+              type="password" 
+              name="confirmPassword"
+              value={user.confirmPassword}
+              onChange={handleChange}
+              />
             </div>
-            <label class="membership__input__message"> </label>
-
-            <button class="membership__btn primary--btn" type="submit">
+            <div 
+            class="membership__btn primary--btn" 
+            
+            onClick={register}
+            >
               Get started
-            </button>  
+            </div>
           </form>
-          
+
         </div>
-    </section>
+      </section>
       <hr class="section__divider" /><div class="story__card__container">
         <section class="story__card">
           <div class="story__card__left">
@@ -116,6 +188,6 @@ export default function Signup() {
         <hr class="section__divider" />
       </div>
       <Footer />
-      </>
+    </div>
   )
 }
