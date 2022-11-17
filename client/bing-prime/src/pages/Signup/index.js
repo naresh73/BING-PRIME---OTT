@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Signup.css';
-import logo from '../../Assests/Logo/bing.png';
+import logo from '../../Assests/logo.png';
 import bannerImg from "../../Assests/banner.jpg";
 import got from '../../Assests/GOT/got.jpg';
 import Footer from '../../components/Footer';
@@ -103,7 +103,6 @@ export default function Signup() {
             </div>
             <div 
             class="membership__btn primary--btn" 
-            
             onClick={register}
             >
               Get started

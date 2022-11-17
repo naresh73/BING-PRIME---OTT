@@ -58,10 +58,11 @@ img {
 
 
 .logo img {
-	width: 270px;
+	width: 300px;
+	height: 300px;
 	position: absolute;
-	top: -70px;
-	left: -10px;
+	top: -100px;
+	left: -20px;
 }
 
 .showcase-content {
@@ -109,9 +110,11 @@ img {
 	width: 100%;
 }
 
-.btn-primary {
+.btn-primary-login {
 	width: 100%;
+	text-align: center;
 	height: 50px;
+	padding-top: 13px;
 	border-radius: 5px;
 	background: rgb(0, 149, 255);
 	color: #fff;

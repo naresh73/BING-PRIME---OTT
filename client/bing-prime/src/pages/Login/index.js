@@ -1,5 +1,5 @@
 import './login.css';
-import Logo from '../../Assests/Logo/bing.png';
+import Logo from '../../Assests/logo.png';
 import Footer from '../../components/Footer';
 import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
@@ -64,7 +64,7 @@ export default function Login() {
                             </div>
                             <div class="btn">
                                 <div 
-                                class="btn-primary" 
+                                class="btn-primary-login" 
                                 onClick={login}
                                 >Log In</div>
                             </div>

@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+*{
+	font-family:"Poppins", sans-serif;
+}
+
+.header{
+    background-color: rgb(23, 23, 23);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 100px;
+	z-index: 100;
+}
+
+.header .logo img{
+    margin-top : -5px;
+    margin-left: -40px;
+}
+
+.navigation{
+    margin-left: 300px;
+	display: flex;
+}
+
+.navigation li{
+	list-style: none;
+	margin: 0 15px;
+}
+
+.navigation li a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: 300;
+    font-size: 13px;
+	letter-spacing: 2px;
+}
+
+.navigation li:hover a{
+	color: #056dff;
+}
+
+.search{
+	position: relative;
+	width: 300px;
+	height: 40px;
+}
+
+.search input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	outline: none;
+	border-radius: 4px;
+	padding: 0 10px 0 45px;
+	backdrop-filter:blur(10px);
+}
+
+.search input::placeholder{
+	color: #fff;
+}
+
+.search .fa-magnifying-glass{
+	position: absolute;
+	top: 50%;
+	left:10px;
+	transform: translateY(-50%);
+	padding-right:10px;
+	color:#fff;
+	border-right:1px solid #fff;
+}
+
+.fa {
+    font-size: 17px;
+    right: 0;
+}
