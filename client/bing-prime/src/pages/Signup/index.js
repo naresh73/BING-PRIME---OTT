@@ -47,7 +47,7 @@ export default function Signup() {
   }
   return (
     <div>
-      <header class="header">
+      <header class="header-signup">
         <a class="header__logo" href="/">
           <img src={logo} alt="logo" />
         </a>

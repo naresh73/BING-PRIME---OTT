@@ -13,27 +13,7 @@ body {
 	background: black;
 }
 
-html {
-	font-size: 62.5%;
-	color: white;
-}
-
-a {
-	color: white;
-}
-
-a:active,
-a:link,
-a:visited {
-	text-decoration: none;
-}
-
-button {
-	background: transparent;
-	border: none;
-	color: white;
-}
-
+	
 :root {
 	--primary-color: #2c9cff;
 }
@@ -52,7 +32,7 @@ button {
 	border: 6px solid #222;
 }
 
-.header {
+.header-signup {
 	position: absolute;
 	height: 10rem;
 	width: 100%;

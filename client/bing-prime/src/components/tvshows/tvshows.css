@@ -1,0 +1,41 @@
+.recommended-section {
+    padding: 20px;
+}
+
+.recommended-section h1 {
+  color: rgb(193, 176, 176);
+  font-size: 25px;
+}
+  .card-movie {
+    display: flex;
+  } 
+  figure {
+    padding-left: 20px;
+    padding-right: 20px;
+   border: 1px solid rgb(133, 123, 123);
+   width: 33%;
+  }
+  figure img {
+    max-width: 100%;
+    height: auto;
+    
+  }
+  figcaption { 
+    margin: 50px 0px 50px;
+    padding: 4px;
+    /* background-color: rgb(59, 59, 59); */
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+  figcaption h4 {
+    font-style: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(129, 114, 114);
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+  figcaption p {
+    
+    font-size: 0.8em;
+    color: rgb(0, 0, 0);
+  }

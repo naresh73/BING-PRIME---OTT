@@ -1,3 +1,17 @@
 .movies-slider {
-    padding-top: 100px;
+    padding: 80px 0px 0px 0px;
+
 }
+
+.item  {
+    height: 500px;
+}
+
+.item .joker{
+    margin-left: 20%;
+}
+
+.joker {
+    width: 60%;
+}
+

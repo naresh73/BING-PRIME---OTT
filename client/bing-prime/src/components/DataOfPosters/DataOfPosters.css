@@ -1,0 +1,33 @@
+.trending-movies-section
+    {
+        padding: 20px;
+    }
+.trending-movies-section h1 {
+    color: rgb(193, 176, 176);
+    padding-top: 0px;  
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .box {
+    
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+  }
+  
+  .box a {
+    transition: transform .1s;  
+  }
+  
+  .box a:hover {
+    transition: transform .5s;
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);  
+    transform: scale(1.2);
+  }
+  
+  .box img {
+    border-radius: 5px;
+  }
+  
