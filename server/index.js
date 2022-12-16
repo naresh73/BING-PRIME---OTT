@@ -4,6 +4,20 @@ const bing = express();
 const cors = require("cors");
 const connectToDB = require("./db");
 const userModel = require("./models/user.model");
+const jwt = require('jsonwebtoken');
+
+
+async function generateAuthToekn() {
+    try {
+        let token = jwt.sign({
+            email : email
+        },
+        secret = "123"
+        )
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 connectToDB();
 bing.use(express.json());
@@ -29,8 +43,8 @@ bing.post('/register', async (req, res) => {
             }
             else {
                 res.send({
-                    message: "Account created successfully"
-                })
+                    message: "Account created successfully",
+                    token : 123})
             }
 
         })
@@ -40,7 +54,6 @@ bing.post('/register', async (req, res) => {
 bing.post('/login', async (req, res) => {
     const {email, password} = req.body
     const user = await userModel.findOne({email : email})
-    console.log(user);
 
     if(!user){
         return res.send({
@@ -53,6 +66,8 @@ bing.post('/login', async (req, res) => {
             message : "incorrect password"
         })
     }
+
+    const token = await user.generateAuthToekn();
 
     res.send({
         message : "login successfully",
