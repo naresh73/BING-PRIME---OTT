@@ -26,15 +26,23 @@ export default function Signup() {
     })
   }
 
-  function register() {
+  async function register() {
     const {
       name, email, password, confirmPassword
     } = user;
 
     if( name && email && password ) {
       if(password === confirmPassword) {
-        axios.post("http://localhost:3001/register", user)
-        .then(res => alert(res.data.message))
+        await axios.post("http://localhost:3001/register", user)
+        .then((res) => {
+           alert(res.data.message)
+            if(res.data.token) {
+              navigate("/login")
+            }
+        }
+        )
+
+          
       }
       else {
         alert("password didn't match")

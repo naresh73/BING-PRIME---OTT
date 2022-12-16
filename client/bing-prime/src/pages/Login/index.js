@@ -28,6 +28,9 @@ export default function Login() {
         try {
             const res = await axios.post("http://localhost:3001/login", user)
             alert(res.data.message)
+            if(res.data.user) {
+                navigate('/bing')
+            }
         } catch (error) {
             alert(error)
         }
